@@ -1,10 +1,10 @@
 #powered by rocheparadox
-#make sure psql server is running in the specified port and the user has enough permission to tconnect the specified database
+#make sure psql server is running in the specified port and the user has enough permission to connect the specified database
 
 import psycopg2
 
 host = 'localhost'
-port = '5436'
+port = '5432'
 database = 'postgres'
 user = 'postgres'
 
