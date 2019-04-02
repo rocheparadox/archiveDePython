@@ -26,4 +26,4 @@ try:
     print("Mail Sent")
 
 except Exception as e:
-    print("There was a problem in sending the mail " + str(e))
+    print("There was a problem in sending the mail " + e)

@@ -9,7 +9,7 @@ if len(sys.argv) > 1:
     workbook_name = sys.argv[1]
 else:
     workbook_name = 'empty_url.xlsx'
-
+    
 current_dir=os.getcwd()
 result_dir = current_dir + "/result"
 if(os.path.isdir(result_dir)):
