@@ -2,13 +2,23 @@ import http.server
 import socketserver
 import sys
 import os
+import argparse
+
+
 
 port = 8000  #set 8000 as default serving port
-if len(sys.argv) > 1:
-    port = int(sys.argv[1]) #Get first argument as port if exists
+os.chdir(os.getcwd())
+parser = argparse.ArgumentParser()
+parser.add_argument('--port', '-p', type=int)
+parser.add_argument('--dir', '-d', type=str)
+args = vars(parser.parse_args())
 
-if len(sys.argv) > 2:
-    os.chdir(sys.argv[2]) #Get second argument as directory which has to be served
+if args['port'] != None:
+    port = args['port'] #Get the port from arguments
+
+if args['dir'] != None:
+    dir = args['dir'] #Get the directory to serve from arguments
+    os.chdir(dir)
 
 handler = http.server.SimpleHTTPRequestHandler
 httpd = socketserver.TCPServer(("",port), handler)
