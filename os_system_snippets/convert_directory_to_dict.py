@@ -17,6 +17,5 @@ path = os.getcwd()
 if len(sys.argv) > 1:
     path = sys.argv[1]
 
-path = '/home'
 tree = get_tree(path)
 print(tree)
