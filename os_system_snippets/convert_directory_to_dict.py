@@ -17,6 +17,6 @@ path = os.getcwd()
 if len(sys.argv) > 1:
     path = sys.argv[1]
 
-path = '/home/local/ZOHOCORP/roche-6660/Documents/automater_python/test_sheets'
+path = '/home'
 tree = get_tree(path)
 print(tree)
