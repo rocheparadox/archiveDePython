@@ -1,7 +1,7 @@
 import xlrd
 
-excelOnePath = "/home/local/ZOHOCORP/roche-6660/Documents/GroundZero/check1.xlsx"
-excelTwoPath = "/home/local/ZOHOCORP/roche-6660/Documents/GroundZero/downloaded.xlsx"
+excelOnePath = "sheet1.xlsx"
+excelTwoPath = "sheet2.xlsx"
 
 excelOne = xlrd.open_workbook(excelOnePath)
 excelTwo = xlrd.open_workbook(excelTwoPath)
